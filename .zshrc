@@ -8,9 +8,13 @@ export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl/include
 ZSH_THEME="flazz"
 
 plugins=(git brew rspec ruby node )
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Andy/.rvm/gems/ruby-2.3.1/bin:/Users/Andy/.rvm/gems/ruby-2.3.1@global/bin:/Users/Andy/.rvm/rubies/ruby-2.3.1/bin:/Users/Andy/.rvm/bin:/Users/Andy/.rvm/bin"
+export EDITOR=vim
 
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=$HOME/go
+eval "$(rbenv init -)"
+alias be='bundle exec'
+alias bi='bundle install'
+
+alias gpg='gpg2'
