@@ -9,12 +9,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'evidens/vim-twig'
 Plugin 'moll/vim-node'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 
 colorscheme gruvbox
+
 set background=dark
 filetype plugin indent on
 
@@ -38,6 +41,7 @@ set undolevels=1000
 set title
 
 set list
+set backspace=indent,eol,start
 
 set pastetoggle=<f2>
 syntax on
@@ -57,3 +61,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 :command Wq wq
 :command W w
 :command Q q
+
+hi htmlArg gui=italic
+hi Comment gui=italic
+hi Type    gui=italic
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type    cterm=italic
+
