@@ -12,9 +12,17 @@ Plugin 'mxw/vim-jsx'
 Plugin 'evidens/vim-twig'
 Plugin 'moll/vim-node'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tomlion/vim-solidity'
 Plugin 'morhetz/gruvbox'
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'scrooloose/syntastic'
+
 
 call vundle#end()
+
+" Syntastic
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
 colorscheme gruvbox
 
@@ -69,3 +77,4 @@ hi htmlArg cterm=italic
 hi Comment cterm=italic
 hi Type    cterm=italic
 
+command E Ex

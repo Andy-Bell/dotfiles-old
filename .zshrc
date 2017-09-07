@@ -5,7 +5,7 @@ export OPENSSL_INCLUDE_DIR=/usr/local/Cellar/openssl/1.0.2h_1/include/
 export OPENSSL_ROOT_DIR=/usr/local/opt/openssl/include
 export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl/include
 
-ZSH_THEME="flazz"
+ZSH_THEME="xiong-chiamiov-plus"
 
 plugins=(git brew rspec ruby node )
 export EDITOR=vim
@@ -20,7 +20,7 @@ alias bi='bundle install'
 alias gpg='gpg2'
 
 alias tmux='TERM=screen-256color-italic tmux'
-alias vim='/usr/local/Cellar/vim/8.0.0600/bin/vim'
+alias vim='/usr/local/Cellar/vim/8.0.0666_1/bin/vim'
 
 export ANSIBLE_VAULT_PASSWORD_FILE=/Users/andyb/.vault_pass
 export ANSIBLE_HOST_KEY_CHECKING=False
@@ -33,5 +33,18 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export TERM=screen-256color-italic
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export TIME_STYLE=long-iso
 
 DISABLE_AUTO_TITLE="true"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/andyb/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/andyb/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/andyb/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/andyb/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
