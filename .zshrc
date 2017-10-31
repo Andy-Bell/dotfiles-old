@@ -48,3 +48,7 @@ if [ -f '/Users/andyb/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/andyb/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/andyb/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/Users/andyb/workspace/parity/target/release:$PATH"

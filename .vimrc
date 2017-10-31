@@ -16,6 +16,7 @@ Plugin 'tomlion/vim-solidity'
 Plugin 'morhetz/gruvbox'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'leafgarland/typescript-vim'
 
 
 call vundle#end()
@@ -33,6 +34,7 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set smarttab
 
 set autoindent
 set copyindent
