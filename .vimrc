@@ -17,7 +17,15 @@ Plugin 'morhetz/gruvbox'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'leafgarland/typescript-vim'
-
+Plugin 'alx741/vim-yesod'
+Plugin 'pbrisbin/vim-syntax-shakespeare'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'https://github.com/rust-lang/rust.vim'
+Plugin 'Align'
 
 call vundle#end()
 
@@ -25,11 +33,14 @@ call vundle#end()
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
+" colourschemes
 colorscheme gruvbox
+let g:airline_theme='deus'
 
 set background=dark
 filetype plugin indent on
 
+" Default Settings
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -53,17 +64,28 @@ set title
 set list
 set backspace=indent,eol,start
 
+" Use the old vim regex engine (version 1, as opposed to version 2, which was
+" introduced in Vim 7.3.969). The Ruby syntax highlighting is significantly
+" slower with the new regex engine.
+set re=1
+
 set pastetoggle=<f2>
 syntax on
+
+" Sets Everything to 4 spaces
+function! FourSpace()
+  setlocal tabstop=4
+  setlocal softtabstop=4
+  setlocal shiftwidth=4
+endfunction
+
+au FileType php call FourSpace()
+au FileType twig call FourSpace()
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 :inoremap jj <Esc>
 
