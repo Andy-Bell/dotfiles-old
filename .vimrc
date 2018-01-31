@@ -15,7 +15,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomlion/vim-solidity'
 Plugin 'morhetz/gruvbox'
 Plugin 'neovimhaskell/haskell-vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'alx741/vim-yesod'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
@@ -26,16 +25,24 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'https://github.com/rust-lang/rust.vim'
 Plugin 'Align'
+Plugin 'w0rp/ale'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'racer-rust/vim-racer'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
-
-" Syntastic
-let g:syntastic_php_checkers=['php', 'phpcs']
-let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
 " colourschemes
 colorscheme gruvbox
 let g:airline_theme='deus'
+
+" linting settings
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_filetype_changed = 1
 
 set background=dark
 filetype plugin indent on

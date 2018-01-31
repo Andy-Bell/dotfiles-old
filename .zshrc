@@ -7,7 +7,7 @@ export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl/include
 
 ZSH_THEME="xiong-chiamiov-plus"
 
-plugins=(git brew rspec ruby node )
+plugins=(git brew rspec ruby node venv)
 export EDITOR=vim
 
 source $ZSH/oh-my-zsh.sh
@@ -20,7 +20,9 @@ alias bi='bundle install'
 alias gpg='gpg2'
 
 alias tmux='TERM=screen-256color-italic tmux'
-alias vim='/usr/local/Cellar/vim/8.0.0666_1/bin/vim'
+alias vim='/usr/local/Cellar/vim/8.0.1400_4/bin/vim'
+
+alias safeyaml='~/safeyaml/safeyaml.py'
 
 export ANSIBLE_VAULT_PASSWORD_FILE=/Users/andyb/.vault_pass
 export ANSIBLE_HOST_KEY_CHECKING=False
@@ -52,3 +54,9 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/Users/andyb/workspace/parity/target/release:$PATH"
+export PATH="/Users/andyb/.local/bin:$PATH"
+export PATH="/Users/andyb/.cabal/bin:$PATH"
+export PATH="/Users/andyb/Library/Haskell/bin:$PATH"
+export PATH="/Users/andyb/workspace/rebar3:$PATH"
+
+export GPG_TTY=$(tty)
