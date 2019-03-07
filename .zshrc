@@ -2,9 +2,9 @@ export PATH="/usr/local/bin/rbenv:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/andyb/.oh-my-zsh
 
-export OPENSSL_INCLUDE_DIR=/usr/local/Cellar/openssl/1.0.2h_1/include/
-export OPENSSL_ROOT_DIR=/usr/local/opt/openssl/include
-export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl/include
+export OPENSSL_INCLUDE_DIR=/usr/local/Cellar/openssl@1.1/1.1.0f/include
+export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@1.1/include
+export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl@1.1/include
 
 ZSH_THEME="xiong-chiamiov-plus"
 
@@ -28,7 +28,6 @@ alias safeyaml='~/safeyaml/safeyaml.py'
 export ANSIBLE_VAULT_PASSWORD_FILE=/Users/andyb/.vault_pass
 export ANSIBLE_HOST_KEY_CHECKING=False
 export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH="$HOME/.yarn/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -61,6 +60,16 @@ export PATH="/Users/andyb/Library/Haskell/bin:$PATH"
 export PATH="/Users/andyb/workspace/rebar3:$PATH"
 export PATH="/usr/local/bin/rbenv:$PATH"
 export PATH="/usr/local/Cellar/python@2/2.7.14_3/bin/:$PATH"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
 export GPG_TTY=$(tty)
+export KUBECONFIG=~/workspace/dovu/dovu-bmw-pilot-infrastructure/kubernetes/edge-config:~/workspace/dovu/dovu-bmw-pilot-infrastructure/kubernetes/staging-config
 
+today() {
+  echo -n "Today's date is: "
+  date +"%A, %B %-d, %Y"
+}
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PKG_CONFIG_PATH="/opt/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+eval "$(/Users/andyb/.simple/bin/simple init -)"
